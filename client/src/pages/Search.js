@@ -3,6 +3,7 @@ import SearchNav from"../components/SearchNav";
 import Jumbotron from "../components/Jumbotron";
 import SearchForm from "../components/SearchForm";
 import SearchResults from "../components/SearchResults";
+import Footer from "../components/Footer";
 
 export class Search extends Component {
   render() {
@@ -12,6 +13,7 @@ export class Search extends Component {
         <Jumbotron />
         <SearchForm />
         <SearchResults />
+        <Footer />
       </div>
     )
   }

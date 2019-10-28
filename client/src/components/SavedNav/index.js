@@ -14,7 +14,7 @@ export class SavedNav extends Component {
               <a className="nav-link" href="/">Search</a>
             </li>
             <li className="nav-item active">
-              <a className="nav-link" href="/saved">Saved <span class="sr-only">(current)</span></a>
+              <a className="nav-link" href="/saved">Saved <span className="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>

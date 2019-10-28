@@ -7,7 +7,7 @@ export class SearchForm extends Component {
         <form className="border border-secondary p-3 shadow mb-3">
           <h3>Book Search</h3>
           <div className="form-group">
-            <label for="bookInput">Book</label>
+            <label htmlFor="bookInput">Book</label>
             <input type="text" className="form-control" id="bookInput" placeholder="Title, Author, etc..."></input>
           </div>
           <button type="button" className="btn btn-info">Search</button>
