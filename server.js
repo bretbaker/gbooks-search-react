@@ -6,15 +6,13 @@ const app = express();
 const routes = require("./routes");
 app.use(routes);
 
-// init port
-const PORT = process.env.PORT || 3001;
-
 // serve static assets
 if (process.env.NODE_ENV === "development") {
   app.use(express.static("./client/public"));
 }
 
-// start srver
+// initialize port and start server
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Server is listening on port " + PORT);
 });
