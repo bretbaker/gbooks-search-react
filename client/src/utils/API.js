@@ -1,15 +1,15 @@
 import axios from "axios";
 import dotenv from 'dotenv';
-dotenv.config()
+dotenv.config();
 
 // api key
-const apiKey = process.env.API_KEY;
+const apiUrl = process.env.REACT_APP_API_URL;
 
 export default {
-  getBooks: () => {
+  searchBooks: () => {
     return axios({
       method: 'get',
-      url: 'https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=' + apiKey
+      url: apiUrl
     })
       .then((response) => {
         if (response) {

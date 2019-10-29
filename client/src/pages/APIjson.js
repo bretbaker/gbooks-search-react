@@ -7,15 +7,16 @@ export class APIjson extends Component {
   };
 
   componentDidMount() {
-    API.getBooks()
-      .then(res => this.setState({ books: res.data }))
+    API.searchBooks()
+      .then(res => this.setState({ books: JSON.stringify(res.data.items, null, 2) }))
       .catch(err => console.error(err));
   }
   
   render() {
+    console.log(this.state.books);
     return (
       <div>
-        {JSON.stringify(this.state.books)}
+        <h1 style={{ textAlign: 'center', marginTop: '50px' }}>View the console for API data</h1>
       </div>
     )
   }
