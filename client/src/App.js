@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
-import APIjson from "./pages/APIjson";
+// import APIjson from "./pages/APIjson";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Search} />
         <Route exact path="/saved" component={Saved} />
-        <Route exact path="/api/books" component={APIjson} />
+        {/* <Route exact path="/api/books" component={APIjson} /> */}
       </Switch>
     </Router>
   );

@@ -1,21 +1,28 @@
 import React, { Component } from 'react';
 
 export class SearchResults extends Component {
+  
+  // renderBooks = () => {
+  //   this.props.books.map(element => {
+  //       <div key={element.id}>
+
+  //       </div>
+  //   });
+  // }
+  
   render() {
+    console.log(this.props.books);
     return (
-      <div className="container">
-        <div className="border border-secondary shadow p-3 mb-5">
-          <h3 className="mb-3">Results</h3>
-          <div id="no-results" className="border border-secondary text-center p-3 shadow-sm">
-            <h4 className="mb-0 font-weight-light">Search Above for Results</h4>
-          </div>
-          <div id="search-results">
-            {/* this is where book results will append */}
-          </div>
-        </div>
-      </div>
+      // this.renderBooks()
+      this.props.books.map(element => {
+        // <div key={element.id}>
+        //   <h1>Hello</h1>
+        // </div>
+        console.log("hello!");
+      })
     )
   }
 }
 
 export default SearchResults;
+

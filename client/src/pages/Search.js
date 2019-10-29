@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import SearchNav from"../components/SearchNav";
 import Jumbotron from "../components/Jumbotron";
 import SearchForm from "../components/SearchForm";
-import SearchResults from "../components/SearchResults";
+// import SearchResults from "../components/SearchResults";
 import Footer from "../components/Footer";
 
 export class Search extends Component {
@@ -12,7 +12,7 @@ export class Search extends Component {
         <SearchNav />
         <Jumbotron />
         <SearchForm />
-        <SearchResults />
+        {/* <SearchResults /> */}
         <Footer />
       </div>
     )

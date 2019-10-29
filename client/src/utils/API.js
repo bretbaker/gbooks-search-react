@@ -3,23 +3,21 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // api key
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 export default {
-  searchBooks: () => {
+  searchBooks: (apiUrl) => {
+    let fullUrl = apiUrl + apiKey;
     return axios({
       method: 'get',
-      url: apiUrl
+      url: fullUrl 
     })
       .then((response) => {
-        if (response) {
-          return response;
-        }
+        // console.log(JSON.stringify(response.data.items, null, 2));
+        return JSON.stringify(response.data.items, null, 2);
       })
       .catch((error) => {
-        if (error) {
-          return error;
-        }
+          console.error(error);
       });
   }
 };
