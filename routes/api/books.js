@@ -1,14 +1,11 @@
-require('dotenv').config();
 const router = require("express").Router();
 const axios = require('axios');
 
-// api key
-const apiKey = process.env.API_KEY;
 
-router.route("/api/books", (req, res) => {
+router.route("/api/saved", (req, res) => {
   axios.get({
     method: 'get',
-    url: 'https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=' + apiKey
+    url: '/api/saved'
   })
     .then((response) => {
       res.json(response);

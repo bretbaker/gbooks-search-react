@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from "../../utils/API";
-// import SearchResults from '../SearchResults';
+import SearchResults from '../SearchResults';
 
 export class SearchForm extends Component {
   
@@ -17,8 +17,10 @@ export class SearchForm extends Component {
     // console.log(this.state.apiUrl);
     API.searchBooks(this.state.apiUrl)
       .then((res) => {
-        this.setState({ books: res });
-        // this.thenConsoleLog();
+        this.setState({ books: JSON.parse(res) });
+      })
+      .then(res => {
+        this.thenConsoleLog();
         this.toggleDisplay();
       })
       .catch(err => console.error(err));
@@ -64,7 +66,7 @@ export class SearchForm extends Component {
             <h4 className="mb-0 font-weight-light">Search Above for Results</h4>
           </div>
           <div id="search-results">
-            {/* <SearchResults books={this.state.books}/> */}
+            <SearchResults books={this.state.books}/>
           </div>
         </div>
       </div>
