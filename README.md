@@ -1,0 +1,3 @@
+Code Bootcamp HW Assignment
+- A full stack application that searches the Google Books API and allows users to save books of their interest.
+- This app utilizes MongoDB, Express.js, React.js, Node.js, and more...
