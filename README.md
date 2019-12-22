@@ -1,3 +1,9 @@
-Code Bootcamp HW Assignment
-- A full stack application that searches the Google Books API and allows users to save books of their interest.
-- This app utilizes MongoDB, Express.js, React.js, Node.js, and more...
+# Google Books Search
+
+MERN stack application utlizing the Google Books API to search, explore, and save books of interest.
+
+React, Node, Express, MongoDB, HTML, CSS
+
+Site: https://gbooks-search-react.herokuapp.com/
+
+![alt text](https://github.com/bretbaker808/gbooks-search-react/blob/master/readme-img/desktop-demo-1.gif)
