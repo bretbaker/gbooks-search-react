@@ -1,6 +1,7 @@
 // require and use express
 const express = require('express');
 const app = express();
+const path = require('path');
 
 // connect to database
 const mongoose = require('mongoose');
